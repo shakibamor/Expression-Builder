@@ -1,0 +1,18 @@
+<div style="margin-left:580px">
+  <button type="button" (mousedown)="insertText()">Add Text</button>
+  <select style="margin-left: 10px" (change)="insertOption($event.target.value)">
+    <option>Option1</option>
+    <option>Option2</option>
+    <option>Option3</option>
+  </select>
+</div>
+<div style="text-align:center">
+  <h2>Cursor Position : {{caretPos}}</h2>
+
+  <textarea rows="6" #myTextArea1 (click)="getCaretPos(myTextArea1)" (keyup)="getCaretPos(myTextArea1)"
+    cols="40">First Text Area. You can click and insert new value.</textarea>
+  <textarea rows="6" #myTextArea2 (click)="getCaretPos(myTextArea2)" (keyup)="getCaretPos(myTextArea2)"
+    cols="40">Second Text Area. You can click and insert new value.</textarea>
+  <textarea rows="6" #myTextArea3 (click)="getCaretPos(myTextArea3)" (keyup)="getCaretPos(myTextArea3)"
+    cols="40">Third Text Area. You can click and insert new value.</textarea>
+</div>
